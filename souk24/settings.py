@@ -9,7 +9,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-*bb$u!-1bgo70!izmk8qw6(5l$%4+p%^i=(+&vv+_fx)hwc196') 
+SECRET_KEY ='django-insecure-*bb$u!-1bgo70!izmk8qw6(5l$%4+p%^i=(+&vv+_fx)hwc196'
 
 DEBUG = True
 
@@ -107,17 +107,10 @@ WSGI_APPLICATION = 'souk24.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+DATABASES = {
+    'default': dj_database_url.parse(
+        'postgres://dmlkwnek:6yidNpqZGCLmziw0p1Yg5AHPX4gs3sB_@flora.db.elephantsql.com/dmlkwnek'
+    )
 }
 
 # Password validation
