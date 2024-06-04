@@ -13,10 +13,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-*bb$u!-1bgo70!izmk8qw6(5l$
 
 DEBUG = True
 
-ALLOWED_HOSTS = (
-    'souk24-2787fa7b4e9c.herokuapp.com',
+ALLOWED_HOSTS  = [
+    'herokuapp.com',
     '127.0.0.1',
-)
+    'localhost',
+]
 
 
 # Application definition
