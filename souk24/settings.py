@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import dj_database_url
 
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -114,11 +115,6 @@ else:
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-DATABASES = {
-    'default': dj_database_url.parse ('postgres://dmlkwnek:6yidNpqZGCLmziw0p1Yg5AHPX4gs3sB_@flora.db.elephantsql.com/dmlkwnek')
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
