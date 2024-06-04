@@ -1,0 +1,1 @@
+web: gunicorn souk24.wsgi.application
