@@ -9,11 +9,14 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-*bb$u!-1bgo70!izmk8qw6(5l$%4+p%^i=(+&vv+_fx)hwc196') 
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-*bb$u!-1bgo70!izmk8qw6(5l$%4+p%^i=(+&vv+_fx)hwc196') 
 
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = (
+    'souk24-2787fa7b4e9c.herokuapp.com',
+    '127.0.0.1',
+)
 
 
 # Application definition
